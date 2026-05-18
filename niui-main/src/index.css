@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* ── Signature font ── */
+.signature-font {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+/* ── Print configuration ── */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  #print-preview {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: white !important;
+    color: #111 !important;
+    font-size: 11pt !important;
+  }
+
+  #print-preview * {
+    color: #111 !important;
+    background: transparent !important;
+    border-color: #ccc !important;
+  }
+
+  #print-preview h1,
+  #print-preview h2,
+  #print-preview h3 {
+    color: #000 !important;
+  }
+
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
